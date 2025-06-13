@@ -17,7 +17,7 @@
     "ext-simplexml": "*",
     "ext-xmlwriter": "*",
     "guzzlehttp/guzzle": "6.5.x-dev",
-    "ramsey/uuid": "^4.1.1",
+    "ramsey/uuid": "4.2.3",
     "psr/log": "^1.1.4"
   },
   "require-dev": {
