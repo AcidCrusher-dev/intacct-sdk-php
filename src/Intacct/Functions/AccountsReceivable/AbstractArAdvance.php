@@ -40,6 +40,9 @@ abstract class AbstractArAdvance extends AbstractFunction
     /** @var string */
     protected $undepositedAccountNo;
 
+    /** @var string */
+    protected $bankAccountId;
+
     /** @var array */
     protected $arAdvanceItems = [];
 
@@ -132,6 +135,14 @@ abstract class AbstractArAdvance extends AbstractFunction
     public function setUndepositedAccountNo($undepositedAccountNo)
     {
         $this->undepositedAccountNo = $undepositedAccountNo;
+    }
+
+    public function getBankAccountId() {
+        return $this->bankAccountId;
+    }
+
+    public function setBankAccountId($bankAccountId) {
+        $this->bankAccountId = $bankAccountId;
     }
 
     /**

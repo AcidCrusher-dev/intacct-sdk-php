@@ -65,6 +65,10 @@ class ArAdvanceCreate extends AbstractArAdvance
             $xml->writeElement('UNDEPOSITEDACCOUNTNO', $this->getUndepositedAccountNo());
         }
 
+        if ($this->getBankAccountId()) {
+            $xml->writeElement('FINANCIALENTITY', $this->getBankAccountId());
+        }
+
         if (count($this->getArAdvanceItems()) > 0) {
             $xml->startElement('ARADVANCEITEMS');
             foreach ($this->getArAdvanceItems() as $arAdvanceItem) {
