@@ -46,6 +46,9 @@ abstract class AbstractArAdvance extends AbstractFunction
     /** @var array */
     protected $arAdvanceItems = [];
 
+    /** @var string */
+    protected $docNumber;
+
     /**
      * @return string
      */
@@ -167,5 +170,16 @@ abstract class AbstractArAdvance extends AbstractFunction
     public function addArAdvanceItem(ArAdvanceItem $arAdvanceItem)
     {
         $this->arAdvanceItems[] = $arAdvanceItem;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDocNumber() {
+        return $this->docNumber;
+    }
+
+    public function setDocNumber($docNumber) {
+        $this->docNumber = $docNumber;
     }
 }
