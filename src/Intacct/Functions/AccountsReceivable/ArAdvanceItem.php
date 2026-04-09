@@ -36,6 +36,9 @@ class ArAdvanceItem
     /** @var string */
     private $locationId;
 
+    /** @var string */
+    private $customerId;
+
     /**
      * @return string
      */
@@ -94,6 +97,14 @@ class ArAdvanceItem
         $this->transactionAmount = $transactionAmount;
     }
 
+    public function getCustomerId() {
+        return $this->customerId;
+    }
+
+    public function setCustomerId($customerId) {
+        $this->customerId = $customerId;
+    }
+
     /**
      * @param XMLWriter $xml
      */
@@ -111,6 +122,10 @@ class ArAdvanceItem
 
         if ($this->getLocationId()) {
             $xml->writeElement('LOCATIONID', $this->getLocationId());
+        }
+
+        if ($this->getCustomerId()) {
+            $xml->writeElement('CUSTOMERID', $this->getCustomerId());
         }
 
         if ($this->getTransactionAmount()) {
